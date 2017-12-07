@@ -20,4 +20,16 @@ class postController extends Controller
     {
       # code...
     }
+
+    public function update()
+    {
+      # code...
+    }
+
+    public function delete()
+    {
+      # code...
+    }
+
+
 }
