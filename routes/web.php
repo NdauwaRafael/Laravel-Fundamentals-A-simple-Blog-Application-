@@ -16,10 +16,16 @@ Route::get('/', function () {
 });
 
 Route::get('/posts/create', 'postController@create');
-
+Route::get('/posts/show', 'postController@show');
 /*
 |--------------------------------------------------------------------------
 |  ADDING A NEW POST
 |--------------------------------------------------------------------------
 */
 Route::post('/posts', 'postController@add');
+/*
+|--------------------------------------------------------------------------
+|  DELETING A POST
+|--------------------------------------------------------------------------
+*/
+Route::delete('/posts/delete', 'postController@delete');

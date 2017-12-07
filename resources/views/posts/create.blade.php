@@ -13,16 +13,22 @@
       <textarea class="form-control" name="postcontent" rows="8" required></textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary">Publish Post</button>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Publish Post</button>
+    </div>
+    
+    <div class="form-group">
+      @if(count($errors))
+      <div class="alert alert-danger" role="alert">
+        <ul>
+          @foreach($errors as $error)
+           <li>{{$error}}</li>
+           @endforeach
+        </ul>
+      </div>
+      @endif
+    </div>
   </form>
 
-  @if(count($errors))
-  <div class="alert alert-danger" role="alert">
-    <ul>
-      @foreach($errors as $error)
-       <li>{{$error}}</li>
-       @endforeach
-    </ul>
-  </div>
-  @endif
+
 @endsection
