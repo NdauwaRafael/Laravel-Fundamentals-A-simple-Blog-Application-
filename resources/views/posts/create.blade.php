@@ -6,13 +6,23 @@
     {{ csrf_field() }}
     <div class="form-group">
       <label for="exampleInputEmail1">Enter Post Title</label>
-      <input type="text" class="form-control" name="title"  aria-describedby="emailHelp" placeholder="Enter post Title">
+      <input type="text" class="form-control" name="title"  aria-describedby="emailHelp" placeholder="Enter post Title" required>
     </div>
     <div class="form-group">
       <label>Post Content</label>
-      <textarea class="form-control" name="postcontent" rows="8"></textarea>
+      <textarea class="form-control" name="postcontent" rows="8" required></textarea>
     </div>
 
     <button type="submit" class="btn btn-primary">Publish Post</button>
   </form>
+
+  @if(count($errors))
+  <div class="alert alert-danger" role="alert">
+    <ul>
+      @foreach($errors as $error)
+       <li>{{$error}}</li>
+       @endforeach
+    </ul>
+  </div>
+  @endif
 @endsection

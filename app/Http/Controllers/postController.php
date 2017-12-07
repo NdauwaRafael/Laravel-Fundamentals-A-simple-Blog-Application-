@@ -18,6 +18,12 @@ class postController extends Controller
 
     public function add()
     {
+
+      //Validating posted data
+        $this->validate(request(), [
+          'title' =>'required|max:30|min:10',
+          'postcontent' =>'required|min:20|max:600'
+        ]);
       //Create a new post using the posted data
       $post = new Post;
 

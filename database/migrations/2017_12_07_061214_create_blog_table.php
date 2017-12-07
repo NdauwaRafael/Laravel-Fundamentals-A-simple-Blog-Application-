@@ -22,8 +22,8 @@ class CreateBlogTable extends Migration
         });
 
         Schema::table('blog', function(Blueprint $table){
-            $table->foreign('user_id')->references('id')->on('users');  
-        })
+            $table->foreign('user_id')->references('id')->on('users');
+        });
     }
 
     /**
