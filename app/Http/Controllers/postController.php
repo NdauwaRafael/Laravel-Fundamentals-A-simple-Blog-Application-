@@ -25,7 +25,7 @@ class postController extends Controller
       $post ->content = request('postcontent');
       $post->save();
 
-      return redirect('/posts.show')
+      return redirect('/posts.show');
     }
 
     public function view()
