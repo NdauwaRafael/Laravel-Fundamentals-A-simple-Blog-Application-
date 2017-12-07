@@ -29,3 +29,7 @@ Route::post('/posts', 'postController@add');
 |--------------------------------------------------------------------------
 */
 Route::delete('/posts/delete', 'postController@delete');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
