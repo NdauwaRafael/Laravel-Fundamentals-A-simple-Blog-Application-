@@ -16,3 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/posts/create', 'postController@create');
+
+/*
+|--------------------------------------------------------------------------
+|  ADDING A NEW POST
+|--------------------------------------------------------------------------
+*/
+Route::post('/posts', 'postController@add')

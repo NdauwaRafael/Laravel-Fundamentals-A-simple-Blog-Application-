@@ -16,9 +16,14 @@ class postController extends Controller
       return view('posts.create');
     }
 
-    public function view()
+    public function add()
     {
       # code...
+    }
+
+    public function view()
+    {
+      return view('posts.show');
     }
 
     public function update()
