@@ -18,7 +18,14 @@ class postController extends Controller
 
     public function add()
     {
-      # code...
+      //Create a new post using the posted data
+      $post = new Post;
+
+      $post->title =request('title');
+      $post ->content = request('postcontent');
+      $post->save();
+
+      return redirect('/posts.show')
     }
 
     public function view()

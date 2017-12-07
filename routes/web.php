@@ -22,4 +22,4 @@ Route::get('/posts/create', 'postController@create');
 |  ADDING A NEW POST
 |--------------------------------------------------------------------------
 */
-Route::post('/posts', 'postController@add')
+Route::post('/posts', 'postController@add');
